@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function findBestMatch(query){
-    const db = JSON.parse(fs.readFileSync('embeddings/embeddings.json','utf8'));
+    const db = JSON.parse(fs.readFileSync('../embeddings/embeddings.json','utf8'));
     let best = null;
     let bestScore = -1;
 
@@ -14,3 +14,4 @@ function findBestMatch(query){
     }
     return best;
 }
+module.exports = {findBestMatch};

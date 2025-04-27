@@ -1,22 +1,29 @@
 const axios = require('axios');
 
-async function askOllama(context,question){
+async function askOllama(context, question) {
     const prompt = `
-    Use the following context to asnwer the question:
-    ${context}
+Use the following context to answer the question:
+${context}
 
-    Question: ${Question}
+Question: ${question}
     `;
 
-    const response = await axios.post('http:localhost:11434/api/chat',{
-        model:'llama2',
-        messages: [{
-            role:"user",
-            content:prompt
-        }]
+    const response = await axios({
+        method: 'post',
+        url: 'http://localhost:11434/api/chat',
+        data: {
+            model: 'llama2',
+            messages: [{
+                role: "user",
+                content: prompt
+            }],
+            stream: false
+        }
     });
 
-    return response.data.messages.content;
+    const messageContent = response.data.message.content;
+
+    return messageContent;
 }
 
-module.exports = {askOllama};
+module.exports = { askOllama };
