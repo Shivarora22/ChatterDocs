@@ -94,11 +94,14 @@ Once you have the dependencies installed, follow these steps to run the project:
 
 3. **Project Structure**:
     
-    Create two directories inside "embeddings" and "data" and add your pdf file inside data directory.
+    Create two directories inside: "embeddings" and "data" and add your pdf file inside data directory.
     
-3. **Configure Embeddings File**:
+4. **Configure Embeddings File**:
 
-    Make sure you change the "your_file_name" inside embed-file.js and then run "node embed-file.js" 
+    Make sure you change the "your_file_name" inside embed-file.js and then run:
+    ```bash
+    node embed-file.js
+    ```  
 
 ---
 
