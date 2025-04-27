@@ -21,7 +21,7 @@ async function saveEmbedding(filePath){
     });
 
     fs.writeFileSync('embeddings/embeddings.json', JSON.stringify(db,null,2));
-    console.log('Saved embedding for ${filePath}');
+    console.log(`Saved embedding for ${filePath}`);
 }
 
 module.exports = {saveEmbedding}
