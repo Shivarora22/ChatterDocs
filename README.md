@@ -86,21 +86,25 @@ Once you have the dependencies installed, follow these steps to run the project:
     npm start
     ```
 
-    This will launch the server locally on `http://localhost:11434`.
+    This will launch the server locally on `http://localhost:3000`.
 
 2. **Start Llama2 Model**:
 
     Ensure that you have Llama2 running locally (via `ollama run llama2`). This will handle the processing of queries.
 
+3. **Project Structure**:
+    
+    Create two directories inside "embeddings" and "data" and add your pdf file inside data directory.
+    
 3. **Configure Embeddings File**:
 
-    Make sure you have the `embeddings/embeddings.json` file with the document embeddings.
+    Make sure you change the "your_file_name" inside embed-file.js and then run "node embed-file.js" 
 
 ---
 
 ## API Usage
 
-### `POST /api/chat`
+### `POST /ask`
 
 This is the main endpoint that will receive queries and return contextually relevant answers from your documents.
 
@@ -108,11 +112,6 @@ This is the main endpoint that will receive queries and return contextually rele
 
 ```json
 {
-  "model": "llama2",
-  "messages": [
-    {
-      "role": "user",
-      "content": "Your question here"
-    }
-  ]
+  "question": "Your_Question_Here"
 }
+
