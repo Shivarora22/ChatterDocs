@@ -83,7 +83,7 @@ Once you have the dependencies installed, follow these steps to run the project:
     Use the following command to start the project:
 
     ```bash
-    npm start
+    node app.js
     ```
 
     This will launch the server locally on `http://localhost:3000`.
