@@ -1,27 +1,28 @@
 {
-  "name": "local-ai",
+  "name": "chatter-docs",
   "version": "1.0.0",
-  "description": "",
+  "description": "ChatterDocs is a powerful, AI-driven document assistant that leverages Llama2 to process your documents and answer questions based on their content. It uses document embeddings to efficiently search and provide context-based answers. Perfect for navigating complex or long documents with ease.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shivarora22/Local-AI.git"
+    "url": "git+https://github.com/Shivarora22/ChatterDocs.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Shivarora22/Local-AI/issues"
+    "url": "https://github.com/Shivarora22/ChatterDocs/issues"
   },
-  "homepage": "https://github.com/Shivarora22/Local-AI#readme",
+  "homepage": "https://github.com/Shivarora22/ChatterDocs#readme",
   "dependencies": {
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "pdf-parse": "^1.1.1"
-  }
+  },
+  "devDependencies": {}
 }
