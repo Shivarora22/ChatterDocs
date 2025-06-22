@@ -22,7 +22,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
+    "multer": "^2.0.1",
     "pdf-parse": "^1.1.1"
-  },
-  "devDependencies": {}
+  }
 }
