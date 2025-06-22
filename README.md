@@ -1,13 +1,18 @@
-# ChatterDocs
+# 📄 ChatterDocs
 
-ChatterDocs is a powerful, AI-driven document assistant that leverages Llama2 to process your documents and answer questions based on their content. It uses document embeddings to efficiently search and provide context-based answers. Perfect for navigating complex or long documents with ease.
+**ChatterDocs** is an AI-powered document assistant that helps you interact with your PDFs using natural language. It processes documents using chunking, tokenization, and TF-IDF-based semantic search, and answers questions using the powerful **Mistral 7B** language model via **Ollama**.
 
-## Features
+---
 
-- **AI-Powered Answers**: Ask questions about any document and get contextually relevant responses.
-- **Efficient Document Searching**: Built on embeddings to search and retrieve the most relevant content.
-- **Natural Language Understanding**: Leverages Llama2 for accurate and fast processing of questions.
-- **API-Driven**: Interact with the system via simple HTTP requests.
+## 🚀 Features
+
+- **AI-Powered Q&A**: Ask questions about any PDF and receive contextually relevant answers.
+- **TF-IDF Based Search**: Efficiently ranks document chunks based on semantic similarity.
+- **Fast & Lightweight**: Upgraded to **Mistral 7B**, improving performance by ~35–45% over LLaMA2.
+- **Simple API Interface**: Communicate using easy-to-use REST endpoints.
+- **Custom Chunking & Embeddings**: Adjustable chunk size and tokenization logic for precision.
+- **Offline-Ready**: Works with locally hosted models via Ollama—no external APIs required.
+
 
 ---
 
@@ -46,7 +51,7 @@ Before setting up ChatterDocs, ensure that you have the following:
     Once installed, run the Llama2 model:
 
     ```bash
-    ollama run llama2
+    ollama run mistral
     ```
 
 3. **Embeddings File**: The system uses pre-processed embeddings of your documents. Ensure that you have a `embeddings/embeddings.json` file with the document embeddings saved in it.
@@ -88,9 +93,9 @@ Once you have the dependencies installed, follow these steps to run the project:
 
     This will launch the server locally on `http://localhost:3000`.
 
-2. **Start Llama2 Model**:
+2. **Start Mistral 7B Model**:
 
-    Ensure that you have Llama2 running locally (via `ollama run llama2`). This will handle the processing of queries.
+    Ensure that you have Mistral 7B running locally (via `ollama run mistral`). This will handle the processing of queries.
 
 3. **Project Structure**:
     
