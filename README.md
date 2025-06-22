@@ -99,17 +99,21 @@ Once you have the dependencies installed, follow these steps to run the project:
 3. **Project Structure**:
     
     Create two directories inside: "embeddings" and "data" and add your pdf file inside data directory.
-    
-4. **Configure Embeddings File**:
-
-    Make sure you change the "your_file_name" inside embed-file.js and then run:
-    ```bash
-    node embed-file.js
-    ```  
 
 ---
 
 ## API Usage
+### `POST /embed`
+
+Upload a PDF and automatically create embeddings from its content.
+
+#### Request Format
+
+Content-Type: `multipart/form-data`
+
+| Key  | Type | Description         |
+|------|------|---------------------|
+| file | File | PDF file to upload  |
 
 ### `POST /ask`
 
@@ -123,19 +127,29 @@ This is the main endpoint that will receive queries and return contextually rele
 }
 ```
 ## Example Query
-
-```example
+#### Embed File
+```example1
+curl -X POST http://localhost:3000/embed \
+  -F "file=@./data/your-document.pdf"
+```
+#### Ask Query
+```example2
 curl -X POST http://localhost:3000/ask \
 -H "Content-Type: application/json" \
 -d '{"question": "Summarize the introduction"}'
 ```
 ## Screenshots
 #### 1. Embeddings.json
-![Embeddings.json](https://github.com/user-attachments/assets/0934c8de-81a8-4eb1-9dcb-6b9cc370260f)
+![Embed-file1](https://github.com/user-attachments/assets/b17a843e-465e-41b0-b175-c3733131afc9)
+
+![Embed-file2](https://github.com/user-attachments/assets/e9b900c4-2d82-427b-9444-a48bbf249c6a)
+
+
 
 
 #### 2. Query Result
-![Query Result](https://github.com/user-attachments/assets/c97acbfb-d8b9-49e8-8da7-e4f2dcae93d5)
+![Query-Result](https://github.com/user-attachments/assets/67279ffa-7bb7-4f23-8be2-6751819a5b69)
+
 
 
 
