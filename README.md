@@ -23,8 +23,7 @@
 3. [Running the Project](#running-the-project)
 4. [API Usage](#api-usage)
 5. [Example Query](#example-query)
-6. [Contributing](#contributing)
-7. [License](#license)
+6. [Screenshots](#screenshots)
 
 ---
 
@@ -122,4 +121,21 @@ This is the main endpoint that will receive queries and return contextually rele
 {
   "question": "Your_Question_Here"
 }
+```
+## Example Query
+
+```example
+curl -X POST http://localhost:3000/ask \
+-H "Content-Type: application/json" \
+-d '{"question": "Summarize the introduction"}'
+```
+## Screenshots
+#### 1. Embeddings.json
+![Embeddings.json](https://github.com/user-attachments/assets/0934c8de-81a8-4eb1-9dcb-6b9cc370260f)
+
+
+#### 2. Query Result
+![Query Result](https://github.com/user-attachments/assets/c97acbfb-d8b9-49e8-8da7-e4f2dcae93d5)
+
+
 
