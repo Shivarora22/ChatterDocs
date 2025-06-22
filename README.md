@@ -1,6 +1,6 @@
 # 📄 ChatterDocs
 
-**ChatterDocs** is an AI-powered document assistant that helps you interact with your PDFs using natural language. It processes documents using chunking, tokenization, and TF-IDF-based semantic search, and answers questions using the powerful **Mistral 7B** language model via **Ollama**.
+**ChatterDocs** is a smart tool that lets you talk to your PDF files like you're chatting with a person. It breaks down the document into parts, figures out what each part means, and helps find the most relevant answers to your questions using a powerful AI brain called **Mistral 7B**, which runs locally using **Ollama**.
 
 ---
 
