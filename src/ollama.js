@@ -1,6 +1,11 @@
 const axios = require('axios');
 
-async function askOllama(context, question) {
+async function askOllama(contexts, question) {
+
+   const context = contexts.map((c, i) =>
+        `Document ${i + 1}:\n${c.text}`
+    ).join('\n---\n');
+
     const prompt = `
 Use the following context to answer the question:
 ${context}
@@ -12,7 +17,7 @@ Question: ${question}
         method: 'post',
         url: 'http://localhost:11434/api/chat',
         data: {
-            model: 'llama2',
+            model: 'mistral',
             messages: [{
                 role: "user",
                 content: prompt

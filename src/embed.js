@@ -48,7 +48,7 @@ function calculateTF(tokens){
 
 async function saveEmbedding(filePath){
     const text = await extractTextFromPDF(filePath);
-    const chunkedArray = await chunkText(text,100);
+    const chunkedArray = await chunkText(text,1500);
 
     let db =[];
     if(fs.existsSync('embeddings/embedding.json')){
