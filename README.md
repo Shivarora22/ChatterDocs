@@ -47,7 +47,7 @@ Before setting up ChatterDocs, ensure that you have the following:
     npm install -g ollama
     ```
 
-    Once installed, run the Llama2 model:
+    Once installed, run the Mistral 7B model:
 
     ```bash
     ollama run mistral
