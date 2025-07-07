@@ -64,7 +64,7 @@ Before setting up ChatterDocs, ensure that you have the following:
     Clone the ChatterDocs repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/chatterdocs.git
+    git clone https://github.com/Shivarora22/chatterdocs.git
     cd chatterdocs
     ```
 
